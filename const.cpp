@@ -55,9 +55,9 @@ int main() {
     TM3<const int, 2> i2(1);
     TM3<const int, 2> j2(2.3);
 
-    d2.output();
-    i2.output();
-    j2.output();
+    d3.output();
+    i3.output();
+    j3.output();
 
     return 0;
 }
