@@ -21,6 +21,16 @@ public:
     void output() {  std::cout << x << " | " << maxval << std::endl;  }
 };
 
+template<typename T, int maxval>
+class TM4 {
+public:
+    T x;
+    // TM4(T _x) : x(_x) { maxval = 54; }
+    TM4(T _x) : x(_x) { }
+
+    void output() {  std::cout << x << " | " << maxval << std::endl;  }
+};
+
 
 int main() {
     TM1 a1              = TM1(1, 2);
@@ -58,6 +68,15 @@ int main() {
     d3.output();
     i3.output();
     j3.output();
+
+    TM4<int, 4> a4(123);
+    // int nonconstvar = 77;
+    // TM4<int, nonconstvar> b4(32);
+    const int constvar = 77;
+    TM4<int, constvar> c4(32);
+
+    a4.output();
+    c4.output();
 
     return 0;
 }
