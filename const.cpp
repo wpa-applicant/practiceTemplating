@@ -44,16 +44,16 @@ int main() {
     f1.output();
     i1.output();
 
-    // TM3 a2(1, 2);
-    // TM3<int> b2(1, 2);
-    // TM3<int> c2(1);
-    TM3<int, 2> d2(1);
-    // TM3<2> e(a);
-    // TM3<int 1, 2> f;
-    // TM3<int 1, 2> g();
-    // TM3<maxval=2> h(1);
-    TM3<const int, 2> i2(1);
-    TM3<const int, 2> j2(2.3);
+    // TM3 a3(1, 2);
+    // TM3<int> b3(1, 2);
+    // TM3<int> c3(1);
+    TM3<int, 2> d3(1);
+    // TM3<2> e3(a);
+    // TM3<int 1, 2> f3;
+    // TM3<int 1, 2> g3();
+    // TM3<maxval=2> h3(1);
+    TM3<const int, 2> i3(1);
+    TM3<const int, 2> j3(2.3);
 
     d3.output();
     i3.output();
