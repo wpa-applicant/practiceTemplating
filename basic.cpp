@@ -81,7 +81,7 @@ int main() {
     TmCl1 a1 = TmCl1("asd", "fasd");
     TmCl1 b1 = TmCl1(3, 5);
     TmCl1 c1 = TmCl1(1.0, 2.1);
-    //  What:  Parameters will not be implicitly coverted during deduction
+    //  What:  Parameters will not be implicitly converted during deduction
     // TmCl1 d1 = TmCl1(1.0, 2);
     // TmCl1 e1 = TmCl1(1.1, 2);
 
