@@ -34,6 +34,15 @@ int main() {
 
     // const int h_var_1_1 = 1;  const int h_var_1_2 = 2;
     // TM1<const int> h1   = TM1(h_var_1_1, h_var_1_2);
+    TM1<const int> i1   = TM1<const int>(3.2, 6.4);
+
+    a1.output();
+    b1.output();
+    c1.output();
+    d1.output();
+    e1.output();
+    f1.output();
+    i1.output();
 
     // TM3 a2(1, 2);
     // TM3<int> b2(1, 2);
@@ -43,6 +52,12 @@ int main() {
     // TM3<int 1, 2> f;
     // TM3<int 1, 2> g();
     // TM3<maxval=2> h(1);
+    TM3<const int, 2> i2(1);
+    TM3<const int, 2> j2(2.3);
+
+    d2.output();
+    i2.output();
+    j2.output();
 
     return 0;
 }
