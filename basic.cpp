@@ -81,14 +81,13 @@ int main() {
     TmCl1 a1 = TmCl1("asd", "fasd");
     TmCl1 b1 = TmCl1(3, 5);
     TmCl1 c1 = TmCl1(1.0, 2.1);
+    //  What:  Parameters will not be implicitly coverted during deduction
     // TmCl1 d1 = TmCl1(1.0, 2);
     // TmCl1 e1 = TmCl1(1.1, 2);
 
     a1.output();
     b1.output();
     c1.output();
-    // d1.output();
-    // e1.output();
 
 
     std::cout << "-------------------- 2" << std::endl;
@@ -106,20 +105,25 @@ int main() {
 
 
     std::cout << "-------------------- 3" << std::endl;
-    // TmCl2 b3 = TmCl3(3, 5);
-
-    // b3.output();
+    //  What:  Don't use anonymous parameters
+    // TmCl3 b31                       = TmCl3(3, 5);
+    // TmCl3<int, int> b32             = TmCl3(3, 5);
+    // TmCl3<const int, const int> b33 = TmCl3(3, 5);
 
 
     std::cout << "-------------------- 4" << std::endl;
-    // TmCl2 b4 = TmCl4(3, 5);
-
-    // b4.output();
+    //  What:  Don't use anonymous parameters
+    // TmCl4 b41                       = TmCl4(3, 5);
+    // TmCl4<int, int> b42             = TmCl4(3, 5);
+    // TmCl3<const int, const int> b33 = TmCl3(3, 5);
 
 
     std::cout << "-------------------- 5" << std::endl;
-    // TmCl2 a5 = TmCl5("asd", "fasd");
+    //  What:  The default constructor tries to parse the "fasd" as y which is int
+    // TmCl5 a5 = TmCl5("asd", "fasd");
+    //  What:  The default constructor will parse the 5 as y which is int
     TmCl5 b5 = TmCl5(3, 5);
+    //  What:  The default constructor will implicitly demote the 2.1 to int (y is int)
     TmCl5 c5 = TmCl5(1.0, 2.1);
     TmCl5 d5 = TmCl5(1.0, 2);
     TmCl5 e5 = TmCl5(1.1, 2);
@@ -130,10 +134,13 @@ int main() {
     d5.output();
     e5.output();
 
-    
+
     std::cout << "-------------------- 6" << std::endl;
+    //  What:  The explicit constructor tries to parse the "fasd" as y which is int
     // TmCl6 a6 = TmCl6("asd", "fasd");
+    //  What:  The explicit constructor will parse the 5 as y which is int
     TmCl6 b6 = TmCl6(3, 5);
+    //  What:  The explicit constructor will implicitly demote the 2.1 to int (y is int)
     TmCl6 c6 = TmCl6(1.0, 2.1);
     TmCl6 d6 = TmCl6(1.0, 2);
     TmCl6 e6 = TmCl6(1.1, 2);
