@@ -7,3 +7,6 @@ set_property(TARGET basic PROPERTY CXX_STANDARD 20)
 add_executable(const const.cpp)
 set_property(TARGET const PROPERTY CXX_STANDARD 20)
 
+add_executable(function function.cpp)
+set_property(TARGET function PROPERTY CXX_STANDARD 20)
+
